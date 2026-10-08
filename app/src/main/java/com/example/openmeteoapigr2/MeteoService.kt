@@ -10,7 +10,7 @@ interface MeteoService {
     suspend fun getWeather(
         @Query ("latitude") lat : Double,
         @Query ("longitude") lon : Double,
-        @Query ("hourly") hourly : String = "temperature_2m",
+        @Query ("hourly") hourly : String = "temperature_2m,weather_code",
         @Query ("timezone") tz : String = "auto")
     : MeteoResponse
 
